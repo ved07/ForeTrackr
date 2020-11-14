@@ -11,6 +11,11 @@ form {
     object-fit: cover;
 }
 
+.darkbgimg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
+    object-fit: cover;
+}
+
 img {
     display: block;
     margin-left: auto;
@@ -52,7 +57,7 @@ img {
     padding-right: 2%;
     padding-bottom: 1%;
     border-radius: 3%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .username-input{

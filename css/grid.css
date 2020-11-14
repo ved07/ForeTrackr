@@ -1,0 +1,36 @@
+.filename {
+    grid-area: name;
+}
+
+.originalUpload{
+    grid-area: originalUpload;
+}
+
+.lastAccess{
+    grid-area: lastAccess;
+}
+
+.allAccesses {
+    line-height: 2.5ex;
+    height: 7.5ex; /* 2.5ex for each visible line */
+    overflow-y:auto;
+    grid-area: allAccesses;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'name name'
+      'originalUpload originalUpload'
+      'lastAccess lastAccess'
+      'allAccesses allAccesses';
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
