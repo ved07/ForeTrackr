@@ -6,14 +6,15 @@
     <title>Document</title>
     <!-- style -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="navBar.css">
-    <link rel="stylesheet" href="float.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navBar.css">
+    <link rel="stylesheet" href="css/float.css">
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+   
+
     <script>
         
         $(document).ready(function() {
@@ -25,29 +26,35 @@
             $("#mainListDiv").fadeIn();
             
         });
-        // document.getElementById("username").textContent = "FF";
         $(".login").mouseenter(function (){
-            // alert("c");
             $(".username").show();
-            // document.getElementById("userpass").hidden = true
         })
-        // $(".username").load(function (){
-        //     alert("c");
-        //     $(".username").hide()
-        //     document.getElementById("userpass").hidden = true
-        // })
-        // $(".logo").on('click', function(event){
-        //     alert("c");
-        // });
-    // $(window).scroll(function(){
-    // // $(".avatar").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
-    // $(".avatar").animate({down: '20px'})
-    // });
             $(".username").hide()
         })
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
+
+        $(function () {
+            $(".sign-in").click(function () {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                alert(username);
+                // $.ajax({
+                //     type: "POST",
+                //     url: "URL",
+                //     data: '{}',
+                //     contentType: "application/json; charset=utf-8",
+                //     dataType: "json",
+                //     success: function (response) {
+                //     if (response.d == true) {
+                //             alert("You will now be redirected.");
+                //             window.location = "//www.aspsnippets.com/";
+                //         }
+                //     },
+                //     failure: function (response) {
+                //         alert(response.d);
+                //     }
+                // });
+            });
+        });
     </script>
     
 </head>
@@ -56,9 +63,9 @@
     <div class="bgimg">
         <nav class="nav">
             <div class="container">
-                <div class="logo">
+                <!-- <div class="logo">
                     <a href="#"><button class= "logo">ForeTrackR</button></a>
-                </div>
+                </div> -->
                 <div id="mainListDiv" class="main_list">
                     <ul class="navlinks nav3">
                         <li><a href="#description">About</a></li>
@@ -66,20 +73,11 @@
                         <li><a href="#">Contact</a></li>
                         <li>
                             <div class="Sign in">
-                            <button onmouseover="myFunction()" class="dropbtn">Sign in</button>
-                            <div id="myDropdown" class="dropdown-content">
-                              <!-- <a> <input type="text" class="username-input" placeholder="Username"></a> -->
-                              <a href="#about"><input id="username" class="username-input" placeholder="username"></a> 
-                              <a href="#about"><input id="password" class="username-input" placeholder="password"></a> 
-                              <a href="#about"><input id="password" class="username-input" placeholder="password"></a> 
-                              <a href="#about"><button class="username">Submit</button></a>
-                            </div>
+                                <button class="sign-in dropbtn">Sign in</button>
                           </div>
                         </li>
-
-                        <li class="username" id="username"><div></div><a href="#"><input type="text" class="username-input" placeholder="Username"></a></li>
-                        
-                        <!-- <li class="username" id="username"><div></div><a href="#"><input type="text" class="username-input" placeholder="Password"></a></li> -->
+                        <li><a href="#"><input type="text" id="username" class="username-input" placeholder="Username"></a></li>
+                        <li><a href="#"><input id="password" class="username-input" placeholder="password"></a> </li>
                     </ul>
                 </div>
                 <span class="navTrigger">
@@ -106,15 +104,13 @@
                     <div class=title>
                         ForeTrackR
                     </div>
-                ForeTrackR is the premier digital forensics storage tool. 
-                Using blockchain technologies, every document transaction is 
-                secured and accounted for. If the Chain of Custody is ever broken,
-                unique file hashes will become changed and investigators will be notified 
-                with optional datasaving rollback.
+                    ForeTrackR is the premier digital forensics storage tool. 
+                    Using blockchain technologies, every document transaction is 
+                    secured and accounted for. If the Chain of Custody is ever broken,
+                    unique file hashes will become changed and investigators will be notified 
+                    with optional datasaving rollback.
                 </div>
                 <br><br><br><br><br>
-            
-                
                 <center>
                     <div class="avatar">
                         <center><img src="images/floater.png"/></center>
