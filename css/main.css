@@ -12,8 +12,9 @@ form {
 }
 
 .darkbgimg {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background.jpg');
     object-fit: cover;
+    background-repeat: repeat;
 }
 
 img {
@@ -92,3 +93,47 @@ img {
   /* -ms-transform: translateY(-50%); */
   /* transform: translateY(-50%); */
 }
+
+.evidenceSearch {
+    width: 400px;
+    height: 40px;
+    font-size: large;
+    border-radius: 3%;
+    padding-left: 10px;
+}
+
+.add-evidence {
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    /* padding: 16px; */
+    font-size: 2.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-overlay {
+    /*Hides pop-up when there is no "active" class*/
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 3px solid #666666;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+  }
+  
+  .popup-overlay.active {
+    /*displays pop-up when "active" class is present*/
+    visibility: visible;
+    text-align: center;
+  }
+  
+  .popup-content {
+    /*Hides pop-up content when there is no "active" class */
+    visibility: hidden;
+  }
+  
+  .popup-content.active {
+    /*Shows pop-up content when "active" class is present */
+    visibility: visible;
+  }

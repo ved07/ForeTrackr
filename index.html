@@ -29,11 +29,12 @@
         })
 
         })
-
+        var username; 
+        var password;
         $(function () {
             $(".sign-in").click(function () {
-                var username = document.getElementById("username").value;
-                var password = document.getElementById("password").value;
+                username = document.getElementById("username").value;
+                password = document.getElementById("password").value;
                 var settings = {
                     "url": "https://us-central1-aiot-fit-xlab.cloudfunctions.net/foretrackrlogin",
                     "method": "POST",
@@ -46,10 +47,15 @@
                 $.ajax(settings).done(function (response) {
                     var obj = JSON.parse(response);
                     if (obj.status == "success"){
+                        var accessLevel = obj.accesslevel;
                         alert("You will now be redirected.");
+                        var data = JSON.stringify({"user":username, "pass":password, "accessLevel": accessLevel});
+                        alert(data)
+                        // alert(JSON.parse(`{"user": username, "pass": password, accessLevel: obj.accessLevel}`))
+                        localStorage.setItem("user_data", data);
                         window.location = "userPage.html";
                     }else{
-                        alert(obj.status)
+                        alert("Username or password not found.")
                     }
                 });
             });

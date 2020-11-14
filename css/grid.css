@@ -11,26 +11,34 @@
 }
 
 .allAccesses {
-    line-height: 2.5ex;
-    height: 7.5ex; /* 2.5ex for each visible line */
-    overflow-y:auto;
+    /* line-height: 2.5ex; */
+    /* height: 7.5ex; 2.5ex for each visible line */
+    /* overflow-y:auto; */
     grid-area: allAccesses;
+}
+
+.fileData {
+    /* line-height: 2.5ex;
+    height: 7.5ex; 2.5ex for each visible line */
+    /* overflow-y:auto; */
+    grid-area: fileData;
 }
 
 .grid-container {
     display: grid;
     grid-template-areas:
-      'name name'
-      'originalUpload originalUpload'
-      'lastAccess lastAccess'
-      'allAccesses allAccesses';
-    grid-gap: 10px;
-    background-color: #2196F3;
+      'name originalUpload lastAccess'
+      'allAccesses allAccesses allAccesses'
+      'fileData fileData fileData';
+    grid-gap: 1px;
+    background-color: rgba(0, 0, 0, 0.45);
     padding: 10px;
+    /* width:auto */
   }
   .grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 20px 0;
-    font-size: 30px;
+    font-size: small;
+    /* width:auto */
   }
