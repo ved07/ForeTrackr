@@ -22,10 +22,10 @@ body {
 }
 
 .nav div.logo {
-    float: left;
+    float:left;
     width: auto;
     height: auto;
-    padding-left: 3rem;
+    padding-right: 20rem;
 }
 
 .nav div.logo a {
@@ -378,6 +378,7 @@ body {
 
 
  .dropbtn {
+    z-index: 100;
     background-color: rgba(0, 0, 0, 0.0);
     color: white;
     /* padding: 16px; */
@@ -391,12 +392,14 @@ body {
   }
   
   .dropdown {
+    z-index: 100;
     position: relative;
     display: inline-block;
     
   }
   
   .dropdown-content {
+      position: absolute;
     z-index: 100;
     padding: -60px 50px; line-height: 28px;
     display: none;
