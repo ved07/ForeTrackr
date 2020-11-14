@@ -13,37 +13,73 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- <script>
-        $(document).ready(){
-            alert("hi");
+    
+    <script>
+        
+        $(document).ready(function() {
+            $('.navTrigger').click(function () {
+            alert("dd")
+            $(this).toggleClass('active');
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+            
+        });
+        // document.getElementById("username").textContent = "FF";
+        $(".login").mouseenter(function (){
+            // alert("c");
+            $(".username").show();
+            // document.getElementById("userpass").hidden = true
+        })
+        // $(".username").load(function (){
+        //     alert("c");
+        //     $(".username").hide()
+        //     document.getElementById("userpass").hidden = true
+        // })
+        // $(".logo").on('click', function(event){
+        //     alert("c");
+        // });
+    // $(window).scroll(function(){
+    // // $(".avatar").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
+    // $(".avatar").animate({down: '20px'})
+    // });
+            $(".username").hide()
+        })
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
         }
-    </script> -->
+    </script>
     
 </head>
 <body>
-    <script>
-        $('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    console.log("Clicked menu");
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
 
-});
-
-
-    </script>
     <div class="bgimg">
         <nav class="nav">
             <div class="container">
                 <div class="logo">
-                    <a href="#">Your Logo</a>
+                    <a href="#"><button class= "logo">ForeTrackR</button></a>
                 </div>
                 <div id="mainListDiv" class="main_list">
-                    <ul class="navlinks">
-                        <li><a href="#">About</a></li>
+                    <ul class="navlinks nav3">
+                        <li><a href="#description">About</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">Login</a></li>
+                        <li>
+                            <div class="Sign in">
+                            <button onmouseover="myFunction()" class="dropbtn">Sign in</button>
+                            <div id="myDropdown" class="dropdown-content">
+                              <!-- <a> <input type="text" class="username-input" placeholder="Username"></a> -->
+                              <a href="#about"><input id="username" class="username-input" placeholder="username"></a> 
+                              <a href="#about"><input id="password" class="username-input" placeholder="password"></a> 
+                              <a href="#about"><input id="password" class="username-input" placeholder="password"></a> 
+                              <a href="#about"><button class="username">Submit</button></a>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="username" id="username"><div></div><a href="#"><input type="text" class="username-input" placeholder="Username"></a></li>
+                        
+                        <!-- <li class="username" id="username"><div></div><a href="#"><input type="text" class="username-input" placeholder="Password"></a></li> -->
                     </ul>
                 </div>
                 <span class="navTrigger">
@@ -53,14 +89,47 @@
                 </span>
             </div>
         </nav>
-        <div class="container">
-            <div class="avatar">
-                <a href="https://codepen.io/MarioDesigns/">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/skytsunami.png" alt="Skytsunami" />
-                </a>
-            </div>
-        </div>
+
+        <br><br><br><br><br><br><br><br><br><br>
+
         <section class="home">
+            <div class="row">
+            <div class="col-lg-4 bg1">
+                <center>
+                    <div class="avatar">
+                        <center><img src="images/floater.png"/></center>
+                    </div>
+                </center>
+            </div>
+            <div class="col-lg-4 bg2">
+                <div class="description" id="description">
+                    <div class=title>
+                        ForeTrackR
+                    </div>
+                ForeTrackR is the premier digital forensics storage tool. 
+                Using blockchain technologies, every document transaction is 
+                secured and accounted for. If the Chain of Custody is ever broken,
+                unique file hashes will become changed and investigators will be notified 
+                with optional datasaving rollback.
+                </div>
+                <br><br><br><br><br>
+            
+                
+                <center>
+                    <div class="avatar">
+                        <center><img src="images/floater.png"/></center>
+                    </div>
+                </center>
+            </div>
+            <div class="col-lg-4 bg3">
+                <br><br><br><br><br><br><br><br><br><br>
+                <center>
+                    <div class="avatar">
+                        <center><img src="images/floater.png"/></center>
+                    </div>
+                </center>
+            </div>
+            </div>
         </section>
     
     <!-- Jquery needed -->
