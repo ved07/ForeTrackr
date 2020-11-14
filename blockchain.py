@@ -1,7 +1,8 @@
 import json
 class chainedBlocks():
     def __init__(self):
-        self.chain = { }
+        self.chain = {}
+
     def addBlock(self, block, date):
-        self.chain[date] = block
+        self.chain[str(date)] = block
         print(self.chain)

@@ -7,7 +7,14 @@
         previous_hashed_ledger: xxxx}
 There are many ledgers in a block, and many blocks in the chain, you should only need the chain stored in coreManagement.chain.chain
  """
+from datetime import datetime
 from management import CoreManagement
 manager = CoreManagement(evidence="myfile.txt")
 """Example below to make a record:"""
 manager.onAccess(type = "Log In", user="ved", evidence="myfile.txt")
+manager.onAccess(type = "Log In", user="ved", evidence="myfile.txt")
+manager.onAccess(type = "Log In", user="ved", evidence="myfile.txt")
+manager.onAccess(type = "Log In", user="ved", evidence="myfile.txt")
+manager.onAccess(type = "Log In", user="ved", evidence="myfile.txt")
+manager.addToChain()
+

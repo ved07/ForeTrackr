@@ -12,9 +12,13 @@ class CoreManagement:
         self.chain = chainedBlocks()
         self.block = Block()
         self.evidenceHash = hashFile(evidence)
+    def addToChain(self):
+        self.chain.addBlock(self.block.block, date.today())
+        self.block = Block()
     def onAccess(self,type=None,user=None,evidence=None):
+
         if self.date != date.today():
-            self.chain.addBlock(self.block.block, date)
-            self.block = Block()
+            self.addToChain()
         isHashIden = hashFile(evidence) == self.evidenceHash
-        self.block.add(type=type, time=datetime.now().time(),username=user,evidence=evidence, is_hash_identical=isHashIden)
+        dateTime = str(datetime.utcnow())
+        self.block.add(type=type, time=dateTime,username=user,evidence=evidence, is_hash_identical=isHashIden)
