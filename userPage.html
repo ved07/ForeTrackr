@@ -19,6 +19,21 @@
         var documentNames = ["File one", "File two"];
 
         $(document).ready(function() {
+            $("#file-select").change(function(){
+                document.getElementById("item-name-div").innerHTML = "File Selected";
+            })
+            $("#upload-button").click(function(){
+                let fileName = document.getElementById("Upload-Name").value;
+                let file = document.getElementById("file-select").value;
+                //POST these to server
+                
+
+                document.getElementById("Upload-Name").value = "";
+                file = document.getElementById("file-select").value = "";
+                document.getElementById("item-name-div").innerHTML = "";
+                $('.addEvidence').toggle(1000);
+
+            })
             $('.addEvidence').toggle(1);
             $('#add-evidence-button').click(function (){
                 $('.addEvidence').toggle(1000);
@@ -106,7 +121,7 @@
     </nav>
     <section class="home">
 
-        <br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br>
         
 
 
@@ -121,21 +136,18 @@
 
 
         <center><div id="addEvidence" class="addEvidence">
-            <br>
+           <br>
             <p>
-            <form action="/action_page.php">
                 <label class="custom-file-upload">
-                    <input type="file"/>
+                    <input type="file" id="file-select"/>
                     Select File
                 </label>
-                <input type="text" placeholder="Upload Name" class="custom-file-upload-name">
+                <input type="text" id="Upload-Name" placeholder="Upload Name" class="custom-file-upload-name">
                 <br>
-                <button class="upload-button">Upload</button>
-              </form>
-             
+                <button class="upload-button" id="upload-button">Upload</button>     
+                <div id="item-name-div" class="item-name-div"></div>        
             </p>
         </div></center>
-
 
         <div class="container" >
             <br><br>
