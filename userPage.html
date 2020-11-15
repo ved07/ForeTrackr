@@ -19,6 +19,10 @@
         var documentNames = ["File one", "File two"];
 
         $(document).ready(function() {
+            $("#so").click(function(){
+                alert("Signed Out")
+                window.location = "index.html";
+            })
             $("#file-select").change(function(){
                 document.getElementById("item-name-div").innerHTML = "File Selected";
             })
@@ -107,7 +111,7 @@
                     <li><a href="#">Contact</a></li>
                     <li>
                         <div class="Sign out">
-                            <button class="sign-in dropbtn">Sign out</button>
+                            <button class="sign-in dropbtn" id="so">Sign out</button>
                       </div>
                     </li>
                 </ul>
