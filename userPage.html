@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/modal.css">
+
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -56,7 +58,6 @@
                     // documentNames.append(file.name)
                 }
                 strHMTL+="</div>"
-                alert(strHMTL)
                 element = document.createElement("div")
                 element.innerHTML = strHMTL;
                 // alert(clon)
@@ -72,7 +73,7 @@
         });
     </script>
 </head>
-<body>
+<body class="darkbgimg">
     <div class="darkbgimg">
         <div class="e"></div>
     <nav class="nav">
@@ -100,7 +101,12 @@
         </div>
     </nav>
     <section class="home">
+
         <br><br><br><br><br><br><br>
+        
+
+
+        
         <center><div class="title">View, Search, and Add Evidence Here<br>
             <br>
             <div class="search-add-evidence">
@@ -108,6 +114,18 @@
                 <button class="add-evidence">Add Evidence</button>
             </div>
         </center>
+
+
+        <center><div id="add item" class="addEvidence">
+            <br>
+            <form action="/action_page.php">
+                <input type="file" id="myFile" name="filename">
+                <input type="submit">
+              </form>
+              <input type="text" placeholder="Upload Name">
+        </div></center>
+
+
         <div class="container">
             <br><br>
             <div class="data-container">
@@ -153,29 +171,7 @@
          </div>
      </template>
 
-    <script>
-        //appends an "active" class to .popup and .popup-content when the "Open" button is clicked
-        $(".open").on("click", function() {
-        $(".popup-overlay, .popup-content").addClass("active");
-        });
-
-        //removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
-        $(".close, .popup-overlay").on("click", function() {
-        $(".popup-overlay, .popup-content").removeClass("active");
-        });
-    </script>
-    <!--Creates the popup body-->
-    <div class="popup-overlay">
-        <!--Creates the popup content-->
-        <div class="popup-content">
-        <h2>Pop-Up</h2>
-        <p> This is an example pop-up that you can make using jQuery.</p>
-        <!--popup's close button-->
-        <button class="close">Close</button> </div>
-    </div>
-    <!--Content shown when popup is not displayed-->
-    <h2>jQuery Pop-Up Example</h2>
-    <button class="open">Open</button>
+    
     </div>
 </body>
 </html>

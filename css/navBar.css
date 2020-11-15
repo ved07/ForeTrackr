@@ -23,8 +23,8 @@ body {
 
 .nav div.logo {
     float:left;
-    width: auto;
-    height: auto;
+    /* width: auto;
+    height: auto; */
     padding-right: 20rem;
 }
 
@@ -107,7 +107,7 @@ body {
         display: block;
     }
     .nav div.logo {
-        margin-left: 15px;
+        padding-right: 15px;
     }
     .nav div.main_list {
         width: 100%;
