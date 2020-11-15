@@ -17,7 +17,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
         var documentNames = ["File one", "File two"];
+
         $(document).ready(function() {
+            $('.addEvidence').toggle(1);
+            $('#add-evidence-button').click(function (){
+                $('.addEvidence').toggle(1000);
+            })
             $('.navTrigger').click(function () {
                 $(this).toggleClass('active');
                 console.log("Clicked menu");
@@ -75,14 +80,13 @@
 </head>
 <body class="darkbgimg">
     <div class="darkbgimg">
-        <div class="e"></div>
     <nav class="nav">
         <div class="container">
             <!-- <div class="logo">
                 <a href="#"><button class= "logo">ForeTrackR</button></a>
             </div> -->
             <div id="mainListDiv" class="main_list">
-                <ul class="navlinks nav3">
+                <ul class="navlinks nav3 bottom-purple">
                     <li><a href="#description">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
@@ -111,24 +115,31 @@
             <br>
             <div class="search-add-evidence">
                 <input type="text" class="evidenceSearch" placeholder="Search by name"> 
-                <button class="add-evidence">Add Evidence</button>
+                <button class="add-evidence" id="add-evidence-button">Add Evidence</button>
             </div>
         </center>
 
 
-        <center><div id="add item" class="addEvidence">
+        <center><div id="addEvidence" class="addEvidence">
             <br>
+            <p>
             <form action="/action_page.php">
-                <input type="file" id="myFile" name="filename">
-                <input type="submit">
+                <label class="custom-file-upload">
+                    <input type="file"/>
+                    Select File
+                </label>
+                <input type="text" placeholder="Upload Name" class="custom-file-upload-name">
+                <br>
+                <button class="upload-button">Upload</button>
               </form>
-              <input type="text" placeholder="Upload Name">
+             
+            </p>
         </div></center>
 
 
-        <div class="container">
+        <div class="container" >
             <br><br>
-            <div class="data-container">
+            <div class="data-container custom-file-upload-name">
                 <center>
                     <div class="col-xs-12"></div>
             </center>
