@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-        var documentNames;
+        var documentNames = ["File one", "File two"];
         $(document).ready(function() {
             $('.navTrigger').click(function () {
                 $(this).toggleClass('active');
@@ -53,6 +53,7 @@
                     strHMTL+= "<b>Is Hash Identical: </b>" + file.is_hash_identical + "<br>";
                     strHMTL+= "<b>Previous Hashed Ledger: </b>" + file.previous_hashed_ledger + "<br>";
                     strHMTL+="</center><br>"
+                    // documentNames.append(file.name)
                 }
                 strHMTL+="</div>"
                 alert(strHMTL)
@@ -62,25 +63,11 @@
                 // alert(clon.getElementById("lastAccess"))
                 clon.getElementById("allAccesses").appendChild(element);
                 elem.appendChild(clon);
+                
                 // alert(clon.getElementsByClassName("allAccesses")[0]);
                 // .innerHTML = strHMTL;
             });
 
-            // var temp = document.getElementById("item");
-            // var clon = temp.content.cloneNode(true);
-            // document.getElementsByClassName("row")[0].appendChild(clon);
-            // var temp = document.getElementById("item");
-            // var clon = temp.content.cloneNode(true);
-            // document.getElementsByClassName("row")[0].appendChild(clon);
-            // var temp = document.getElementById("item");
-            // var clon = temp.content.cloneNode(true);
-            // document.getElementsByClassName("row")[0].appendChild(clon);
-            // var temp = document.getElementById("item");
-            // var clon = temp.content.cloneNode(true);
-            // document.getElementsByClassName("row")[0].appendChild(clon);
-            // var temp = document.getElementById("item");
-            // var clon = temp.content.cloneNode(true);
-            // document.getElementsByClassName("row")[0].appendChild(clon);
             
         });
     </script>
