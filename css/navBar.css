@@ -359,10 +359,12 @@ body {
 }
 
 .nav3 ul > li:hover ul li {
+    z-index: 10000;
    height: 36px;
  }
 
  .nav3 li ul {
+    z-index: 10000;
    position: absolute;
    left: 0;
    top: 36px;
@@ -370,6 +372,7 @@ body {
  }
 
  .nav3 li ul li {
+     z-index: 10000;
    overflow: hidden;
    height: 0;
    -webkit-transition: height 200ms ease-in;

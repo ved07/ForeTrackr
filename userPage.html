@@ -19,6 +19,7 @@
         var documentNames = ["File one", "File two"];
 
         $(document).ready(function() {
+            
             $("#so").click(function(){
                 alert("Signed Out")
                 window.location = "index.html";
@@ -50,6 +51,10 @@
             });
             var user_data = JSON.parse(localStorage.getItem('user_data'));
             var user = user_data.user;
+            if (user == "userwithlevel1access"){
+                document.getElementById("fileData").innerHTML = "";
+            }
+
             var pass = user_data.pass;
             var access_level = parseInt(user_data.accessLevel);
             var settings = {
