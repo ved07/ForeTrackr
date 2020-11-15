@@ -23,8 +23,8 @@ body {
 
 .nav div.logo {
     float:left;
-    /* width: auto;
-    height: auto; */
+    width: auto;
+    height: auto;
     padding-right: 20rem;
 }
 
@@ -379,6 +379,7 @@ body {
 
  .dropbtn {
     z-index: 100;
+    margin-top: -1pt;
     background-color: rgba(0, 0, 0, 0.0);
     color: white;
     /* padding: 16px; */
