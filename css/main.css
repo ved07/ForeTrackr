@@ -9,6 +9,7 @@ form {
 .bgimg {
     background-image: url('background.jpg');
     object-fit: cover;
+    background-repeat: no-repeat;
 }
 
 .darkbgimg {
@@ -58,7 +59,7 @@ img {
     padding-right: 2%;
     padding-bottom: 1%;
     border-radius: 3%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.87);
 }
 
 .username-input{
@@ -136,4 +137,30 @@ img {
   .popup-content.active {
     /*Shows pop-up content when "active" class is present */
     visibility: visible;
+  }
+
+  .special{
+    position: absolute;
+  }
+  
+  .boxy{
+    box-sizing: border-box;
+  }
+  .more-and-less-special{
+      padding-left: 170px;
+    margin-right: 100px;
+  }
+  .rather-special{
+    margin-left: 57px;
+  }
+  .super-special{
+      font-size: medium;
+
+      margin-left: 50px;
+      color: rgb(255, 255, 255);
+  }
+
+  .gotta-get-that-background{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
   }

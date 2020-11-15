@@ -361,12 +361,14 @@ body {
 .nav3 ul > li:hover ul li {
    height: 36px;
  }
+
  .nav3 li ul {
    position: absolute;
    left: 0;
    top: 36px;
    z-index: 1;
  }
+
  .nav3 li ul li {
    overflow: hidden;
    height: 0;
@@ -425,3 +427,20 @@ body {
   .dropdown a:hover {background-color: #ddd;}
   
   .show {display: block;}
+
+  .flippyflippyrotatey{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    margin-left: -150px;
+    margin-top: -150px;
+    transform: rotate(70deg);
+  }
+
+
+  .flippyflippyrotatey2{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    margin-left: -150px;
+    margin-top: -150px;
+    transform: rotate(220deg);
+  }

@@ -18,8 +18,52 @@
 
     <script>
         $(document).ready(function() {
+            $(".avatar").mouseenter(function(){
+                $(".avatar").stop().fadeOut(750);
+            })
+            $(".avatar").mouseenter(function(){
+                $(".avatar").stop().fadeOut(750);
+            })
+            $(".avatar").mouseleave(function(){
+                $(".avatar").stop().fadeIn(750);
+            })
+            $(".avatar2").mouseenter(function(){
+                $(".avatar2").stop().fadeOut(750);
+            })
+            $(".avatar2").mouseleave(function(){
+                $(".avatar2").stop().fadeIn(750);
+            })
+            $(".avatar3").mouseenter(function(){
+                $(".avatar3").stop().fadeOut(750);
+            })
+            $(".avatar3").mouseleave(function(){
+                $(".avatar3").stop().fadeIn(750);
+            })
+
+            $("#d").mouseenter(function(){
+                $(".avatar").stop().fadeOut(750);
+            })
+            $("#d").mouseleave(function(){
+                $(".avatar").stop().fadeIn(750);
+            })
+
+            $("#s").mouseenter(function(){
+                $(".avatar2").stop().fadeOut(750);
+            })
+            $("#s").mouseleave(function(){
+                $(".avatar2").stop().fadeIn(750);
+            })
+
+            $("#c").mouseenter(function(){
+                $(".avatar3").stop().fadeOut(750);
+            })
+            $("#c").mouseleave(function(){
+                $(".avatar3").stop().fadeIn(750);
+            })
+
+
             $('.sign-in').mouseenter(function () {
-                
+
             })
             $('.navTrigger').click(function () {
                 $(this).toggleClass('active');
@@ -51,9 +95,9 @@
                     var obj = JSON.parse(response);
                     if (obj.status == "success"){
                         var accessLevel = obj.accesslevel;
-                        alert("You will now be redirected.");
+                        // alert("You will now be redirected.");
                         var data = JSON.stringify({"user":username, "pass":password, "accessLevel": accessLevel});
-                        alert(data)
+                        // alert(data)
                         // alert(JSON.parse(`{"user": username, "pass": password, accessLevel: obj.accessLevel}`))
                         localStorage.setItem("user_data", data);
                         window.location = "userPage.html";
@@ -68,7 +112,7 @@
 </head>
 <body class="bgimg">
 
-    <div class="bgimg">
+    <div>
         <nav class="nav">
             <div class="container">
                 <!-- <div class="logo">
@@ -77,16 +121,17 @@
                 <div id="mainListDiv" class="main_list">
                     <ul class="navlinks nav3">
                         <!-- <li><a href="#description">About</a></li> -->
-                        <li><a href="#description">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li id="d"><a href="#description">About</a></li>
+                        <li id="s"><a href="#">Services</a></li>
+                        <li id="c"><a href="#">Contact</a></li>
+                        <li><a href="#"></a></li>
                         <li>
                             <div class="Sign in">
                                 <button class="sign-in dropbtn">Sign in</button>
                           </div>
                         </li>
                         <li><a href="#"><input type="text" id="username" class="username-input" placeholder="Username"></a></li>
-                        <li><a href="#"><input id="password" class="username-input" placeholder="password"></a> </li>
+                        <li><a href="#"><input type="hidden" id="password" class="username-input" placeholder="password"></a> </li>
                     </ul>
                 </div>
                 <span class="navTrigger">
@@ -102,9 +147,12 @@
         <section class="home">
             <div class="row">
             <div class="col-lg-4 bg1">
+                <br><br><br><br><br><br><br><br>
                 <center>
-                    <div class="avatar">
-                        <center><img src="images/floater.png"/></center>
+                    <div class="boxy special super-special"><br><br><br><br><br><br><div class="more-and-less-special"><div class="gotta-get-that-background">Security, Privacy, and <br> Accountability. Contact one <br>of us by inspecting <br>the source</div></div></div>
+                    
+                    <div class="avatar2">
+                        <center><img class="flippyflippyrotatey" src="images/floater.png"/></center>
                     </div>
                 </center>
             </div>
@@ -121,16 +169,23 @@
                 </div>
                 <br><br><br><br><br>
                 <center>
-                    <div class="avatar">
-                        <center><img src="images/floater.png"/></center>
+                    <!-- <div class="special"></div> -->
+                    
+                    <div class="boxy special super-special"><br><br><br><br><br><br><div class="gotta-get-that-background">Made with HTML, CSS, <br>Javascript (JQuery, Bootstrap),<br> Python, Google Cloud</div></div>
+                    <div class="boxy special">
+                        <div class="avatar">
+                            <center><img src="images/floater.png"/></center>
+                        </div>
                     </div>
                 </center>
             </div>
             <div class="col-lg-4 bg3">
                 <br><br><br><br><br><br><br><br><br><br>
                 <center>
-                    <div class="avatar">
-                        <center><img src="images/floater.png"/></center>
+                    <div class="boxy special super-special"><br><br><br><br><br><br><div class="gotta-get-that-background rather-special">Front end: <a href= "https://github.com/trigaten">Trigaten</a><br>Blockchain: <a href= "https://github.com/ved07?tab=repositories">ved07</a><br>Back end: <a href= "https://github.com/jemsbhai">Muntaser</a></div></div>
+                    <div class="boxy special">
+                    <div class="avatar3">
+                        <center><img class="flippyflippyrotatey2" src="images/floater.png"/></center>
                     </div>
                 </center>
             </div>
